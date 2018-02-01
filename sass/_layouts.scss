@@ -1,0 +1,47 @@
+.container {
+  max-width: 128rem;
+  //min-width: 48rem;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.header {
+  height: 75vh;
+  padding: 4.8rem 5.6rem 5.6rem 5.6rem;
+  background-image: url('../img/back_null_percents.jpg');
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 2.4rem 2.4rem;
+  }
+}
+
+.main {
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #232323;
+  padding-bottom: 3rem;
+
+  @media only screen and (max-width: $bp-small) {
+    // padding: 2.4rem 2.4rem;
+  }
+
+  & > * {
+    padding: 0 5.6rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 2.4rem;
+    }
+  }
+}

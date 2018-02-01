@@ -1,0 +1,45 @@
+//Colors
+$color-primary-first: #fff;
+$color-primary-second: #000;
+$color-primary-third: #ffcf00;
+
+$grey-color-1: #9b9b9b;
+$grey-color-2: #efefef;
+$grey-color-3: #616161;
+$grey-color-4: #979797;
+
+//Font
+$default-font-size: 1.6rem;
+
+$bp-largest: 80em; // 1280px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 53.125em; // 850px
+$bp-small: 40.625em; // 650px
+$bp-smallest: 30em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+}

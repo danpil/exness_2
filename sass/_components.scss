@@ -1,0 +1,560 @@
+////////////////////////////////////////////
+/// Header
+
+.header__logo-menu-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+
+  .header__logo {
+    margin-right: auto;
+    height: 5.6rem;
+    width: 10.4rem;
+  }
+
+  .user-nav {
+    display: flex;
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+
+    .user-nav__box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > * {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+
+      &:first-child {
+        color: $color-primary-first;
+        margin-right: 3rem;
+      }
+
+      &:last-child {
+        color: $color-primary-third;
+      }
+
+      .user-nav__box-icon {
+        height: 2.4rem;
+        width: 2.4rem;
+        fill: $grey-color-1;
+      }
+    }
+  }
+}
+
+.header__text-box {
+  //margin-top: 20.1rem;
+
+  .heading-primary {
+    margin-bottom: 4rem;
+
+    & > * {
+      //text-transform: uppercase;
+      display: block;
+      color: $color-primary-first;
+    }
+
+    span:first-child {
+      font-size: 5.6rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 4rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+
+    span:last-child {
+      font-size: 2.7rem;
+      font-weight: 100;
+      color: $grey-color-1;
+      margin-top: 1.5rem;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 2.4rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////////
+///Button
+
+.btn {
+  height: 7.2rem;
+  width: 30.4rem;
+  padding: 0 3rem;
+  background-color: $color-primary-third;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //margin-top: 4rem;
+
+  .btn__text {
+    margin-right: auto;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .btn__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+}
+
+/////////////////////////////////////////////
+///Percent
+.percent {
+  //height: 40rem;
+  padding: 4rem 5.6rem;
+  background-color: $color-primary-third;
+  display: flex;
+
+  @media only screen and (max-width: $bp-small) {
+    text-align: center;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 4rem 2.4rem;
+    flex-direction: column;
+  }
+
+  & > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__number {
+    //flex: 0 0 40%;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+
+      @media only screen and (max-width: $bp-small) {
+        display: none;
+      }
+
+      &:first-child {
+        position: absolute;
+        left: -10rem;
+        transform: rotate(-90deg);
+
+        @media only screen and (max-width: $bp-medium) {
+          display: none;
+        }
+      }
+    }
+
+    img {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 3.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2.5rem;
+      padding-left: 1rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+    }
+  }
+}
+
+/////////////////////////////////////////////
+///Payments
+
+.payments {
+  padding: 3.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  background-color: #faf9f9;
+
+  //   & > * {
+  //   }
+  &__header {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3rem;
+    }
+  }
+
+  &__methods {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    // @media only screen and (max-width: $bp-small) {
+    //   display: none;
+    // }
+
+    img {
+      margin-right: 3rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__carousel {
+    flex-basis: 20%;
+  }
+
+  .payments__warning {
+    text-align: center;
+    margin-top: 2.5rem;
+
+    span {
+      font-size: 1.4rem;
+      font-weight: 600;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////
+/////Form
+
+.form {
+  display: flex;
+  justify-content: center;
+
+  &__mobile,
+  &__email {
+    height: 7.2rem;
+    border: none;
+    margin-right: 1.6rem;
+    padding-left: 3rem;
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      font-size: 1.2rem;
+      color: $grey-color-1;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    width: 32.8rem;
+  }
+
+  &__email {
+    width: 30.4rem;
+  }
+}
+
+////////////////////////////////////////////////////////////////
+/////Footer
+
+.footer__icon {
+  height: 8.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $grey-color-4;
+
+  @media only screen and (max-width: $bp-small) {
+    border-bottom: none;
+  }
+
+  a:not(:last-child) {
+    // height: 1.8rem;
+    // width: 3.2rem;
+    // display: inline-block;
+    margin-right: 2rem;
+  }
+
+  //   .footer__icon-vk {
+  //     background-image: url('../img/VK@2x.png');
+  //     // background-size: cover;
+  //     // display: inline-block;
+  //     // height: 1.8rem;
+  //     // width: 3.2rem;
+  //   }
+}
+
+.footer__menu {
+  display: flex;
+  padding-top: 3rem;
+
+  @media only screen and (max-width: $bp-small) {
+    border-bottom: 1px solid $grey-color-4;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__menu-block {
+    list-style: none;
+    flex: 1;
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+
+    li {
+      font-size: 1.6rem;
+
+      @media only screen and (max-width: $bp-small) {
+        &:not(:first-child) {
+          display: none;
+        }
+      }
+
+      a {
+        @media only screen and (max-width: $bp-small) {
+          text-decoration: none;
+        }
+
+        &.link-white {
+          color: $color-primary-first;
+        }
+
+        &.link-grey {
+          color: $grey-color-1;
+        }
+      }
+    }
+  }
+}
+
+.footer__legal {
+  display: flex;
+  margin-top: 8rem;
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 3rem;
+  }
+
+  .footer__legal-block {
+    flex: 1;
+
+    &:first-child {
+      padding-right: 2rem;
+
+      @media only screen and (max-width: $bp-small) {
+        padding-right: 0;
+        text-align: center;
+      }
+
+      & > * {
+        font-size: 1.1rem;
+        color: $grey-color-3;
+
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    &:last-child {
+      flex: 0 0 25%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @media only screen and (max-width: $bp-small) {
+        display: none;
+      }
+
+      img {
+        margin-bottom: 2.5rem;
+
+        &:first-child {
+          margin-left: 2.5rem;
+        }
+
+        &:not(:last-child) {
+          padding-right: 3rem;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////
+///Carousel
+// .carousel-wrapper {
+//   //height: 400px;
+//   position: relative;
+//   //width: 800px;
+//   margin: 0 auto;
+//   display: none;
+
+//   //   &::after {
+//   //     content: '';
+//   //     display: table;
+//   //     clear: both;
+//   //   }
+
+//   @media only screen and (max-width: $bp-small) {
+//     display: block;
+//   }
+// }
+
+// .carousel-item {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   padding: 25px 50px;
+//   opacity: 0;
+//   transition: all 0.5s ease-in-out;
+// }
+
+// .arrow {
+//   position: absolute;
+//   top: 0;
+//   display: block;
+//   width: 50px;
+//   height: 100%;
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//   background: url('http://dancort.es/assets/img/css-carousel/carousel-arrow-dark.png') 50% 50% /
+//     20px no-repeat;
+// }
+
+// .arrow-prev {
+//   left: 0;
+// }
+
+// .arrow-next {
+//   right: 0;
+//   -webkit-transform: rotate(180deg);
+//   transform: rotate(180deg);
+// }
+
+// .light {
+//   color: white;
+// }
+
+// @media (max-width: 480px) {
+//   .arrow,
+//   .light .arrow {
+//     background-size: 10px;
+//     background-position: 10px 50%;
+//   }
+// }
+
+// /*Select every element*/
+// [id^='item'] {
+//   display: none;
+// }
+
+// .item-1 {
+//   z-index: 2;
+//   opacity: 1;
+//   //   background: url('../img/icon-ps-fp.png');
+//   //   background-size: cover;
+// }
+// .item-2 {
+//   background: url('../img/icon-ps-cash.png');
+//   background-size: cover;
+// }
+// .item-3 {
+//   background: url('../img/icon-ps-cash.png');
+//   background-size: cover;
+// }
+// .item-4 {
+//   background: url('../img/icon-ps-pm.png');
+//   background-size: cover;
+// }
+
+// .item-5 {
+//   background: url('../img/icon-ps-wm.png');
+//   background-size: cover;
+// }
+
+// .item-6 {
+//   background: url('../img/icon-ps-visa.png');
+//   background-size: cover;
+// }
+// .item-7 {
+//   background: url('../img/icon-ps-pw.png');
+//   background-size: cover;
+// }
+// .item-8 {
+//   background: url('../img/icon-ps-uk.png');
+//   background-size: cover;
+// }
+
+// *:target ~ .item-1 {
+//   opacity: 0;
+// }
+
+// #item-1:target ~ .item-1 {
+//   opacity: 1;
+// }
+
+// #item-2:target ~ .item-2,
+// #item-3:target ~ .item-3,
+// #item-4:target ~ .item-4,
+// #item-5:target ~ .item-5,
+// #item-6:target ~ .item-6,
+// #item-7:target ~ .item-7,
+// #item-8:target ~ .item-8 {
+//   z-index: 3;
+//   opacity: 1;
+// }
